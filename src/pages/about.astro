@@ -1,0 +1,120 @@
+---
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'About Us',
+  description:
+    'Zhongshan FocusPower Electric Co., Ltd. — a 12V battery charger OEM/ODM factory in Zhongshan, Guangdong, China. R&D, manufacturing and export of lead-acid and lithium battery chargers.',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="About Us"
+    image={{
+      src: '~/assets/images/gallery/factory/9c01571d586e47f01d8c80c326bb2e1f.webp',
+      alt: 'focusPower assembly workbench with branded storage bins',
+    }}
+  >
+    <Fragment slot="title">
+      A source factory for 12V battery chargers,
+      <span class="text-accent dark:text-white"> built for global export</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Zhongshan FocusPower Electric Co., Ltd. is located in Zhongshan, Guangdong — China's
+      lighting &amp; power supply industrial base. We integrate R&amp;D, design, production and
+      export of 12V battery charging equipment, specializing in alligator clip chargers,
+      lead-acid chargers and 12.6V lithium chargers for motorcycle, automotive, solar storage and
+      outdoor power applications.
+    </Fragment>
+  </Hero>
+
+  <Stats
+    title="By the numbers"
+    stats={[
+      { title: 'm² owned plant', amount: '8,000' },
+      { title: 'Daily capacity', amount: '100K' },
+      { title: 'Export countries', amount: '30+' },
+      { title: 'Utility patents', amount: '12' },
+    ]}
+  />
+
+  <Features3
+    title="What we do best"
+    subtitle="We are a factory, not a trading company. Every charger that leaves our plant is designed on our own circuits and built on our own lines."
+    columns={2}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'In-house R&D & patents',
+        description:
+          'We hold utility model patents across charging-optimization circuits, waterproof structures and alligator-clip connection design — moving away from generic public-mold products.',
+        icon: 'tabler:microscope',
+      },
+      {
+        title: 'OEM / ODM customization',
+        description:
+          'Custom function, appearance, connectors, plug standards and packaging based on your target market. We turn your requirement sheet into a sample and then into mass production.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Automated production & QC',
+        description:
+          'Automated SMT and assembly lines, precision test instruments and a dedicated aging-test workshop. 100% aging test before shipment, with full traceability from raw material to carton.',
+        icon: 'tabler:building-factory',
+      },
+      {
+        title: 'Export-ready & certified',
+        description:
+          'Products meet international export standards with CE and RoHS documentation. We adapt to multi-region voltage and plug standards and support brands, distributors and engineering buyers.',
+        icon: 'tabler:ship',
+      },
+    ]}
+  />
+
+  <Steps2
+    title="How we work with you"
+    subtitle="From first inquiry to repeat container orders, the same team handles your account end to end."
+    items={[
+      {
+        title: 'Technical, not sales-first',
+        description:
+          'Our export engineers read your spec sheet before quoting. If a charger is not the right fit for your battery type, we tell you — and propose the one that is.',
+      },
+      {
+        title: 'Quality before volume',
+        description:
+          'Daily capacity of 100,000 units exists only because every line runs the same QC standard. We would rather delay a batch than ship a doubtful one.',
+      },
+      {
+        title: 'Long-term supply partner',
+        description:
+          'We design for repeat orders: stable BOM, consistent molds, documented specs. Once you approve a sample, every reorder ships the same product.',
+      },
+    ]}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Request a Quote',
+        href: '/contact',
+        icon: 'tabler:send',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Looking for a reliable 12V charger factory?
+    </Fragment>
+    <Fragment slot="subtitle">
+      Send us your specification — samples and an FOB/CIF quote follow within 2 business days.
+    </Fragment>
+  </CallToAction>
+</Layout>

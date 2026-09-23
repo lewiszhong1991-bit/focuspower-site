@@ -1,0 +1,72 @@
+site:
+  name: focusPower
+  site: 'https://focuspower.top'
+  base: '/'
+  trailingSlash: false
+
+  googleSiteVerificationId: ''
+
+# Default SEO metadata
+metadata:
+  title:
+    default: focusPower | 12V Battery Charger Manufacturer & OEM/ODM Factory
+    template: '%s | focusPower'
+  description: "FocusPower (Zhongshan FocusPower Electric Co., Ltd.) is a China-based OEM/ODM factory specializing in 12V battery chargers, alligator clip chargers and lead-acid / lithium chargers. 8,000 m² plant, 100,000 units/day, CE & RoHS certified, shipping to 30+ countries."
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: FocusPower
+    images:
+      - url: '~/assets/images/default.png'
+        width: 1200
+        height: 628
+    type: website
+  twitter:
+    handle: ''
+    site: ''
+    cardType: summary_large_image
+
+i18n:
+  language: en
+  textDirection: ltr
+
+apps:
+  blog:
+    isEnabled: false
+    postsPerPage: 8
+
+    post:
+      isEnabled: true
+      permalink: '/%slug%'
+      robots:
+        index: true
+
+    list:
+      isEnabled: true
+      pathname: 'blog'
+      robots:
+        index: true
+
+    category:
+      isEnabled: true
+      pathname: 'category'
+      robots:
+        index: true
+
+    tag:
+      isEnabled: true
+      pathname: 'tag'
+      robots:
+        index: false
+
+    isRelatedPostsEnabled: true
+    relatedPostsCount: 4
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null # or "G-XXXXXXXXXX"
+
+ui:
+  theme: 'light:only'

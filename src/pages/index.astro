@@ -1,0 +1,354 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import SocialProof from '~/components/widgets/SocialProof.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Gallery from '~/components/widgets/Gallery.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import StructuredData from '~/components/common/StructuredData.astro';
+import { SITE, METADATA, I18N } from 'astrowind:config';
+import favIconSvg from '~/assets/favicons/favicon.svg';
+
+const metadata = {
+  title: '12V Battery Charger Manufacturer & OEM/ODM Factory in China',
+  ignoreTitleTemplate: true,
+};
+
+const organizationId = `${SITE?.site}/#organization`;
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE?.site}/#website`,
+    name: SITE?.name,
+    url: SITE?.site,
+    inLanguage: I18N?.language,
+    publisher: { '@id': organizationId },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': organizationId,
+    name: 'Zhongshan FocusPower Electric Co., Ltd.',
+    url: SITE?.site,
+    logo: new URL(favIconSvg.src, SITE?.site).toString(),
+    description:
+      'OEM/ODM manufacturer of 12V battery chargers, alligator clip chargers, lead-acid and lithium battery chargers based in Zhongshan, Guangdong, China.',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <StructuredData slot="head" schema={structuredData} />
+
+  <!-- Hero *********************************************** -->
+  <Hero
+    tagline="OEM / ODM Battery Charger Factory"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get a Quote',
+        href: '/contact',
+        icon: 'tabler:send',
+      },
+      { text: 'View Products', href: '#products', icon: 'tabler:bolt' },
+    ]}
+    image={{
+      src: '~/assets/images/gallery/products/1a48ad2016cd28af8bfb5d26ce9751f0.webp',
+      alt: 'focusPower ZS-49 30W PD DC clip charger with alligator clips',
+    }}
+  >
+    <Fragment slot="title">
+      12V Battery Chargers,
+      <span class="text-accent dark:text-white"> engineered for global brands</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      FocusPower is a China-based source factory specializing in R&amp;D, production and export of
+      12V alligator clip chargers, lead-acid and lithium battery chargers. From our 8,000&nbsp;m²
+      plant in Zhongshan, we deliver 100,000 units a day to brands, distributors and engineering
+      buyers in 30+ countries — with full OEM/ODM customization, CE &amp; RoHS certification.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats ********************************************** -->
+  <Stats
+    id="stats"
+    countUp
+    classes={{ container: '!py-10 md:!py-14' }}
+    stats={[
+      { title: 'm² Owned factory', amount: '8,000' },
+      { title: 'Units produced daily', amount: '100,000' },
+      { title: 'Countries served', amount: '30+' },
+      { title: 'Utility patents', amount: '12' },
+    ]}
+  />
+
+  <!-- Products ******************************************** -->
+  <Features
+    id="products"
+    tagline="Our Products"
+    title="Core charger lines, built on our own circuits"
+    subtitle="Every product is developed on our own charging-optimization circuit, waterproof housing and alligator-clip connection structure — no generic public-mold design."
+    items={[
+      {
+        title: '12V Alligator Clip Chargers',
+        description:
+          'Fast, reliable clamps for motorcycle, lawn & garden and emergency use. Stable spring-loaded contacts, insulated housing, multiple current ratings.',
+        icon: 'tabler:plug-connected',
+      },
+      {
+        title: '12V Lead-Acid Battery Chargers',
+        description:
+          'Multi-stage charging for flooded, AGM and gel lead-acid batteries used in cars, boats and off-grid systems. Over-charge and reverse-polarity protection.',
+        icon: 'tabler:battery-charging',
+      },
+      {
+        title: '12.6V Lithium (LiFePO₄) Chargers',
+        description:
+          'Purpose-built 3-cell lithium chargers for outdoor power stations, portable batteries and solar storage packs, with dedicated CC/CV profiles.',
+        icon: 'tabler:bolt',
+      },
+      {
+        title: 'Solar & Outdoor Power Chargers',
+        description:
+          'Weather-resistant chargers for camping, RV, marine and backup power. UV-stable casing, anti-drip connectors, wide-input voltage for global grids.',
+        icon: 'tabler:sun',
+      },
+    ]}
+  />
+
+  <Gallery
+    id="gallery"
+    tagline="Product Series"
+    title="From 2.4A to 36W — the focusPower range"
+    subtitle="A family of DC alligator-clip chargers built on the same platform: QC3.0 / PD fast charge, AUTO-ID and our protected clamp design."
+    columns={3}
+    images={[
+      {
+        src: '~/assets/images/gallery/products/1a48ad2016cd28af8bfb5d26ce9751f0.webp',
+        alt: 'ZS-49 30W PD DC clip charger',
+        caption: 'ZS-49 · 30W PD',
+      },
+      {
+        src: '~/assets/images/gallery/products/07c9bea85ba2e547d80922b67f8207ce.webp',
+        alt: 'ZS-88PRO 30W transparent DC clip charger',
+        caption: 'ZS-88PRO · 30W QC3.0',
+      },
+      {
+        src: '~/assets/images/gallery/products/177045136c03cc258f240a0ebe438ed4.webp',
+        alt: 'ZS-99PRO 36W DC clip charger with light button',
+        caption: 'ZS-99PRO · 36W',
+      },
+      {
+        src: '~/assets/images/gallery/products/156e7bb9659bdc9de2de803df02f3142.webp',
+        alt: 'ZS-38 30W orange QC3.0 charger',
+        caption: 'ZS-38 · 30W QC3.0',
+      },
+      {
+        src: '~/assets/images/gallery/products/23738a458de3d1a0ad192cd9558c2451.webp',
+        alt: 'ZS-80 white professional 2.4A / QC3.0 charger',
+        caption: 'ZS-80 · 2.4A / QC3.0',
+      },
+      {
+        src: '~/assets/images/gallery/products/0f8486dbd5ab48aaeb30b1c2be4d40e1.webp',
+        alt: 'ZS-37 2.4A multi-port charger',
+        caption: 'ZS-37 · 2.4A 4-port',
+      },
+    ]}
+  />
+
+  <!-- R&D / Patents *************************************** -->
+  <Content
+    id="rd"
+    isReversed
+    tagline="In-house R&D"
+    title="Patented technology, not off-the-shelf public molds"
+    items={[
+      {
+        title: 'Charging optimization circuit',
+        description:
+          'Our own charging algorithm balances current and voltage in real time, extending battery life and reducing overheating — covered by utility model patents.',
+      },
+      {
+        title: 'Waterproof & protective housing',
+        description:
+          'Sealed structural design for indoor and outdoor use, with IP-rated options that resist rain, dust and moisture on the production floor.',
+      },
+      {
+        title: 'Stable alligator-clip connection',
+        description:
+          'Patented clamp geometry maintains firm contact on battery terminals, resisting vibration and loose connection during transit and use.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/gallery/factory/fef02e7b6169ca01b940d1c2dc333f46.webp',
+      alt: 'Automated production and aging test line at focusPower factory',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Customizable to your specification
+      </h3>
+      We adapt function, appearance, connector type, plug standard and packaging to your target
+      market and brand — not the other way around.
+    </Fragment>
+  </Content>
+
+  <!-- Factory ********************************************* -->
+  <Content
+    id="factory"
+    isAfterContent
+    tagline="Factory Strength"
+    title="8,000 m² plant, stable daily output of 100,000 units"
+    items={[
+      {
+        title: 'Full automated production lines',
+        description:
+          'Automated SMT, assembly and aging-test lines with precision instruments, staffed by trained technicians.',
+      },
+      {
+        title: 'End-to-end quality control',
+        description:
+          'Incoming material inspection → assembly → 100% aging test → final QC before shipment. Every batch is traceable.',
+      },
+      {
+        title: 'Fast lead time, reliable supply',
+        description:
+          'Daily capacity of 100,000 units lets us handle large repeat orders with predictable delivery schedules.',
+      },
+      {
+        title: 'Global voltage & certifications',
+        description:
+          'CE, RoHS and other export-standard documentation available. Products adapt to multi-region voltage and plug standards.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/gallery/factory/4f6c111ce99c50ab05180ee1b6fa12f9.webp',
+      alt: 'focusPower assembly line in Zhongshan, Guangdong',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Built for volume export
+      </h3>
+      A dedicated export team supports brands, trading companies and engineering buyers with
+      documentation, labeling and container-level logistics.
+    </Fragment>
+  </Content>
+
+  <!-- OEM / ODM process *********************************** -->
+  <Steps
+    id="oem"
+    tagline="How We Work"
+    title="OEM / ODM in four steps"
+    subtitle="From your requirement sheet to container loading — a transparent, repeatable process."
+    items={[
+      {
+        title: '1. <span class="font-medium">Requirement & spec</span>',
+        description:
+          'Share your target battery type, current, connectors, plug standard, appearance and order volume. We confirm feasibility and quote within 2 working days.',
+        icon: 'tabler:clipboard-list',
+      },
+      {
+        title: '2. <span class="font-medium">Sample & approval</span>',
+        description:
+          'We build a pre-production sample with your branding, labeling and packaging. You test and approve before mass production starts.',
+        icon: 'tabler:test-pipe',
+      },
+      {
+        title: '3. <span class="font-medium">Mass production & QC</span>',
+        description:
+          'Production runs on our automated lines with 100% aging test. We send production and QC photos/videos by milestone.',
+        icon: 'tabler:building-factory',
+      },
+      {
+        title: '4. <span class="font-medium">Shipment & support</span>',
+        description:
+          'Export carton, pallet or container loading per your terms, with full CE/RoHS documentation. After-sales support for warranty and parts.',
+        icon: 'tabler:truck',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80',
+      alt: 'Export warehouse and containers',
+    }}
+  />
+
+  <!-- Certifications / trust bar **************************** -->
+  <SocialProof
+    id="certifications"
+    classes={{ container: '!py-12 md:!py-16' }}
+    items={[
+      { value: 'CE', label: 'EU safety certified', icon: 'tabler:certificate', color: 'text-emerald-500' },
+      { value: 'RoHS', label: 'Restriction of hazardous substances', icon: 'tabler:leaf', color: 'text-green-600' },
+      { value: 'ISO-like QC', label: 'In-house aging test 100%', icon: 'tabler:shield-check', color: 'text-sky-500' },
+      { value: 'OEM/ODM', label: 'Your brand, our production', icon: 'tabler:adjustments', color: 'text-indigo-500' },
+    ]}
+  />
+
+  <!-- FAQs ************************************************* -->
+  <FAQs
+    id="faqs"
+    title="Frequently asked questions"
+    subtitle="What overseas buyers typically ask before placing a trial order."
+    tagline="FAQs"
+    schema
+    items={[
+      {
+        title: 'What is your MOQ?',
+        description:
+          'For our existing models, the trial MOQ is typically 500–1,000 units. For full OEM/ODM projects (custom housing, logo, packaging), MOQ is discussed per project and usually starts around 1,000–3,000 units.',
+      },
+      {
+        title: 'Can you customize the product for our brand?',
+        description:
+          'Yes. We support OEM (logo, color, packaging, plug standard) and ODM (custom function, connector, appearance based on your requirement). Samples are available before mass production.',
+      },
+      {
+        title: 'What certifications do your products have?',
+        description:
+          'Products are produced to export standards and can provide CE and RoHS documentation. Additional certifications for specific markets can be discussed per project.',
+      },
+      {
+        title: 'What is the lead time?',
+        description:
+          'For in-stock or repeat models, around 15–25 days after deposit. For new OEM/ODM projects, add sample approval time; the production lead time is generally 25–40 days depending on volume.',
+      },
+      {
+        title: 'Which regions do you export to?',
+        description:
+          'We serve brands, distributors and engineering customers across Europe, the Americas, the Middle East, Southeast Asia and Oceania, with products adapted to local voltage and plug standards.',
+      },
+      {
+        title: 'How do I request a quote?',
+        description:
+          'Email us or add us on WeChat with your target model, quantity and destination country. We will reply within 1–2 business days with specifications and an FOB/CIF quote.',
+      },
+    ]}
+  />
+
+  <!-- CTA ************************************************* -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Request a Quote',
+        href: '/contact',
+        icon: 'tabler:send',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Ready to source 12V chargers<br class="hidden sm:block" /> from a reliable factory?
+    </Fragment>
+    <Fragment slot="subtitle">
+      Send us your specification — we will respond with a quote and sample plan within 2 working days.
+    </Fragment>
+  </CallToAction>
+</Layout>

@@ -1,0 +1,56 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contact Us',
+  description:
+    'Contact focusPower for OEM/ODM 12V battery charger quotes. Factory in Zhongshan, Guangdong, China. Email or WeChat for a reply within 1-2 business days.',
+};
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Contact"
+    title="Get a quote within 1–2 business days"
+    subtitle="Email us or add us on WeChat with your target charger type, quantity and destination country. Our export team will reply with specifications, pricing and a sample plan."
+  />
+
+  <Features2
+    title="Factory contact"
+    items={[
+      {
+        title: 'Sales & Export',
+        description:
+          'For quotes, samples, OEM/ODM projects and container orders. We reply within 1–2 business days.',
+        icon: 'tabler:briefcase',
+      },
+      {
+        title: 'Email',
+        description: '317073043@qq.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'WeChat / WhatsApp',
+        description: 'WeChat: 15914376302 (same number on WhatsApp)',
+        icon: 'tabler:message-circle',
+      },
+      {
+        title: 'Factory Address',
+        description: 'Zhongshan, Guangdong, China — in the Zhongshan lighting & power supply industrial base.',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Business Hours',
+        description: 'Monday – Saturday, 9:00 – 18:00 (China Time, UTC+8)',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Certifications',
+        description: 'CE, RoHS documentation available with every export order.',
+        icon: 'tabler:certificate',
+      },
+    ]}
+  />
+</Layout>

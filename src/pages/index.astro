@@ -25,11 +25,24 @@ const galleryImages = Object.entries(allProductImports).map(([path, mod]) => ({
   alt: 'focusPower 产品图',
 }));
 
-const allOfficeImports = import.meta.glob('~/assets/images/gallery/office/*.webp', { eager: true }) as Record<string, { default: { src: string } }>;
-const officeImages = Object.entries(allOfficeImports).map(([path, mod]) => ({
-  src: mod.default.src,
-  alt: '战神电器办公环境',
-}));
+import oFrontDesk from '~/assets/images/gallery/office/e34c8dd05a086f3f679b491f00482c99.webp';
+import oLobby from '~/assets/images/gallery/office/517c2343229f7541495daed523b1b17b.webp';
+import oBilliard from '~/assets/images/gallery/office/9e0c7b66cace0337c696b6ff4d52de11.webp';
+import oCulture from '~/assets/images/gallery/office/045e955720d9b7c2b5ada9ba7e070afe.webp';
+import oHonor1 from '~/assets/images/gallery/office/535a5627da710fbffacd770ec01f294f.webp';
+import oHonor2 from '~/assets/images/gallery/office/557670463f30b08fd9ed54d748fd800d.webp';
+import oLounge1 from '~/assets/images/gallery/office/930f57ac6c491d3fc53e5a69f1547c74.webp';
+import oLounge2 from '~/assets/images/gallery/office/0aeea3a3e803e64addb8ce0e4d875e21.webp';
+const officeImages = [
+  { src: oFrontDesk.src, alt: '前台 Reception' },
+  { src: oLobby.src, alt: '公司大厅 Lobby' },
+  { src: oBilliard.src, alt: '员工休息区 Recreation' },
+  { src: oCulture.src, alt: '公司文化墙 Culture Wall' },
+  { src: oHonor1.src, alt: '荣誉墙 Honor Wall' },
+  { src: oHonor2.src, alt: '荣誉墙 Honor Wall' },
+  { src: oLounge1.src, alt: '茶水间 Lounge' },
+  { src: oLounge2.src, alt: '茶水间 Lounge' },
+];
 
 const metadata = {
   title: '12V蓄电池充电器源头工厂 | OEM/ODM定制 - 中山战神电器',

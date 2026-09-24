@@ -3,23 +3,15 @@ import { getPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: '产品中心',
+      text: '产品中心 / Products',
       links: [
         {
-          text: '12V 鳄鱼夹充电器',
+          text: '12V 夹子充电器 / Clip Charger',
+          href: '/#products',
+        },
+        {
+          text: '12V 鳄鱼夹充电器 / Alligator Clip Charger',
           href: '/#gallery',
-        },
-        {
-          text: '铅酸电池充电器',
-          href: '/#products',
-        },
-        {
-          text: '12.6V 锂电池充电器',
-          href: '/#products',
-        },
-        {
-          text: '太阳能户外充电器',
-          href: '/#products',
         },
       ],
     },
@@ -40,22 +32,20 @@ export const headerData = {
       href: '/contact',
     },
   ],
-  actions: [{ text: '获取报价', href: '/contact', icon: 'tabler:send' }],
+  actions: [{ text: '获取报价 / Get Quote', href: '/contact', icon: 'tabler:send' }],
 };
 
 export const footerData = {
   links: [
     {
-      title: '产品中心',
+      title: '产品中心 / Products',
       links: [
-        { text: '12V 鳄鱼夹充电器', href: '/#gallery' },
-        { text: '铅酸电池充电器', href: '/#products' },
-        { text: '12.6V 锂电池充电器', href: '/#products' },
-        { text: '太阳能户外电源', href: '/#products' },
+        { text: '12V 夹子充电器 / Clip Charger', href: '/#products' },
+        { text: '12V 鳄鱼夹充电器 / Alligator Clip Charger', href: '/#gallery' },
       ],
     },
     {
-      title: '解决方案',
+      title: '解决方案 / Solutions',
       links: [
         { text: 'OEM/ODM 定制', href: '/#oem' },
         { text: '工厂与品控', href: '/#factory' },
@@ -64,7 +54,7 @@ export const footerData = {
       ],
     },
     {
-      title: '公司',
+      title: '公司 / Company',
       links: [
         { text: '关于我们', href: '/about' },
         { text: '联系我们', href: '/contact' },
@@ -82,6 +72,6 @@ export const footerData = {
     { ariaLabel: '微信', icon: 'tabler:message-circle', href: 'weixin://dl/chat?15914376302' },
   ],
   footNote: `
-    © ${new Date().getFullYear()} 中山市战神电器有限公司 · 版权所有
+    © ${new Date().getFullYear()} 中山市战神电器有限公司 · Zhongshan FocusPower Electric Co., Ltd. · 版权所有
   `,
 };

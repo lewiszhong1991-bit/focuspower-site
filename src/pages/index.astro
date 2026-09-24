@@ -25,6 +25,12 @@ const galleryImages = Object.entries(allProductImports).map(([path, mod]) => ({
   alt: 'focusPower 产品图',
 }));
 
+const allOfficeImports = import.meta.glob('~/assets/images/gallery/office/*.webp', { eager: true }) as Record<string, { default: { src: string } }>;
+const officeImages = Object.entries(allOfficeImports).map(([path, mod]) => ({
+  src: mod.default.src,
+  alt: '战神电器办公环境',
+}));
+
 const metadata = {
   title: '12V蓄电池充电器源头工厂 | OEM/ODM定制 - 中山战神电器',
   ignoreTitleTemplate: true,
@@ -261,6 +267,16 @@ const structuredData = [
       src: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80',
       alt: '出口仓库与集装箱',
     }}
+  />
+
+  <!-- Office Environment ******************************* -->
+  <Gallery
+    id="office"
+    tagline="办公环境 / Office"
+    title="专业团队，舒适办公"
+    subtitle="位于广东中山灯饰电源产业基地，我们的销售、研发和品控团队在这里为全球客户服务。"
+    columns={4}
+    images={officeImages}
   />
 
   <!-- Certifications / trust bar **************************** -->

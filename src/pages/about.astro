@@ -7,95 +7,91 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About Us',
+  title: '关于我们',
   description:
-    'Zhongshan FocusPower Electric Co., Ltd. — a 12V battery charger OEM/ODM factory in Zhongshan, Guangdong, China. R&D, manufacturing and export of lead-acid and lithium battery chargers.',
+    '中山市战神电器有限公司——位于广东中山的12V蓄电池充电器OEM/ODM源头工厂。专注研发、生产、出口铅酸和锂电池充电器。',
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero
-    tagline="About Us"
+    tagline="关于我们"
     image={{
       src: '~/assets/images/gallery/factory/9c01571d586e47f01d8c80c326bb2e1f.webp',
-      alt: 'focusPower assembly workbench with branded storage bins',
+      alt: '战神电器生产工作台',
     }}
   >
     <Fragment slot="title">
-      A source factory for 12V battery chargers,
-      <span class="text-accent dark:text-white"> built for global export</span>
+      12V蓄电池充电器源头工厂，
+      <span class="text-accent dark:text-white">专为全球出口打造</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Zhongshan FocusPower Electric Co., Ltd. is located in Zhongshan, Guangdong — China's
-      lighting &amp; power supply industrial base. We integrate R&amp;D, design, production and
-      export of 12V battery charging equipment, specializing in alligator clip chargers,
-      lead-acid chargers and 12.6V lithium chargers for motorcycle, automotive, solar storage and
-      outdoor power applications.
+      中山市战神电器有限公司位于广东中山——中国灯饰电源产业基地。我们是一家集研发、设计、生产、出口于一体的12V蓄电池充电设备专业工厂，专注鳄鱼夹充电器、铅酸充电器和12.6V锂电池充电器，广泛适配摩托车、汽车、太阳能储能和户外电源等场景。
     </Fragment>
   </Hero>
 
   <Stats
-    title="By the numbers"
+    title="数字说话"
     stats={[
-      { title: 'm² owned plant', amount: '8,000' },
-      { title: 'Daily capacity', amount: '100K' },
-      { title: 'Export countries', amount: '30+' },
-      { title: 'Utility patents', amount: '12' },
+      { title: '㎡ 自有厂房', amount: '8,000' },
+      { title: '日产能', amount: '10万' },
+      { title: '出口国家', amount: '30+' },
+      { title: '实用新型专利', amount: '12' },
     ]}
   />
 
   <Features3
-    title="What we do best"
-    subtitle="We are a factory, not a trading company. Every charger that leaves our plant is designed on our own circuits and built on our own lines."
+    title="我们的核心优势"
+    subtitle="我们是工厂，不是贸易公司。每一台出厂的充电器都基于自主研发电路，在自有生产线上制造。"
     columns={2}
     isBeforeContent={true}
     items={[
       {
-        title: 'In-house R&D & patents',
+        title: '自主研发与专利',
         description:
-          'We hold utility model patents across charging-optimization circuits, waterproof structures and alligator-clip connection design — moving away from generic public-mold products.',
+          '在充电优化电路、防水防护结构、鳄鱼夹连接设计等领域拥有多项实用新型专利——彻底区别于市面公模产品。',
         icon: 'tabler:microscope',
       },
       {
-        title: 'OEM / ODM customization',
+        title: 'OEM/ODM定制',
         description:
-          'Custom function, appearance, connectors, plug standards and packaging based on your target market. We turn your requirement sheet into a sample and then into mass production.',
+          '根据你的目标市场定制功能、外观、接头、插头标准和包装。我们把你的需求清单变成样品，再变成量产。',
         icon: 'tabler:settings',
       },
       {
-        title: 'Automated production & QC',
+        title: '自动化生产与品控',
         description:
-          'Automated SMT and assembly lines, precision test instruments and a dedicated aging-test workshop. 100% aging test before shipment, with full traceability from raw material to carton.',
+          '自动化SMT和组装线、精密检测仪器、专业老化测试车间。出货前100%老化测试，从原材料到包装箱全流程可追溯。',
         icon: 'tabler:building-factory',
       },
       {
-        title: 'Export-ready & certified',
+        title: '出口认证齐全',
         description:
-          'Products meet international export standards with CE and RoHS documentation. We adapt to multi-region voltage and plug standards and support brands, distributors and engineering buyers.',
+          '产品符合国际出口标准，可提供CE、RoHS文件。适配多国电压和插头标准，服务品牌商、贸易商和工程客户。',
         icon: 'tabler:ship',
       },
     ]}
   />
 
   <Steps2
-    title="How we work with you"
-    subtitle="From first inquiry to repeat container orders, the same team handles your account end to end."
+    title="我们怎么跟你合作"
+    subtitle="从第一次询盘到返单装柜，同一个团队全程对接你的订单。"
     items={[
       {
-        title: 'Technical, not sales-first',
+        title: '技术先行，不是销售导向',
         description:
-          'Our export engineers read your spec sheet before quoting. If a charger is not the right fit for your battery type, we tell you — and propose the one that is.',
+          '我们的外贸工程师先读你的规格书再报价。如果某款充电器不适合你的电池类型，我们会直接告诉你，并推荐合适的型号。',
       },
       {
-        title: 'Quality before volume',
+        title: '质量优先于数量',
         description:
-          'Daily capacity of 100,000 units exists only because every line runs the same QC standard. We would rather delay a batch than ship a doubtful one.',
+          '日产10万台的前提是每条线都执行同一套品控标准。我们宁愿延迟一批货，也不发有疑问的产品。',
       },
       {
-        title: 'Long-term supply partner',
+        title: '长期供货伙伴',
         description:
-          'We design for repeat orders: stable BOM, consistent molds, documented specs. Once you approve a sample, every reorder ships the same product.',
+          '我们为返单而设计：稳定的BOM、一致的模具、规范的规格书。一旦你确认样品，每次返单都是同样的产品。',
       },
     ]}
   />
@@ -104,17 +100,17 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Request a Quote',
+        text: '获取报价',
         href: '/contact',
         icon: 'tabler:send',
       },
     ]}
   >
     <Fragment slot="title">
-      Looking for a reliable 12V charger factory?
+      在找一家靠谱的12V充电器工厂？
     </Fragment>
     <Fragment slot="subtitle">
-      Send us your specification — samples and an FOB/CIF quote follow within 2 business days.
+      把你的规格发给我们——2个工作日内回复样品方案和FOB/CIF报价。
     </Fragment>
   </CallToAction>
 </Layout>

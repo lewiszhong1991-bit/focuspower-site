@@ -15,7 +15,7 @@ import { SITE, METADATA, I18N } from 'astrowind:config';
 import favIconSvg from '~/assets/favicons/favicon.svg';
 
 const metadata = {
-  title: '12V Battery Charger Manufacturer & OEM/ODM Factory in China',
+  title: '12V蓄电池充电器源头工厂 | OEM/ODM定制 - 中山战神电器',
   ignoreTitleTemplate: true,
 };
 
@@ -34,11 +34,11 @@ const structuredData = [
     '@context': 'https://schema.org',
     '@type': 'Organization',
     '@id': organizationId,
-    name: 'Zhongshan FocusPower Electric Co., Ltd.',
+    name: '中山市战神电器有限公司',
     url: SITE?.site,
     logo: new URL(favIconSvg.src, SITE?.site).toString(),
     description:
-      'OEM/ODM manufacturer of 12V battery chargers, alligator clip chargers, lead-acid and lithium battery chargers based in Zhongshan, Guangdong, China.',
+      '位于广东中山的12V蓄电池充电器专业源头工厂，专注研发生产鳄鱼夹充电器、铅酸电池充电器、锂电池充电器，提供OEM/ODM定制服务。',
   },
 ];
 ---
@@ -48,31 +48,28 @@ const structuredData = [
 
   <!-- Hero *********************************************** -->
   <Hero
-    tagline="OEM / ODM Battery Charger Factory"
+    tagline="OEM/ODM 蓄电池充电器源头工厂"
     actions={[
       {
         variant: 'primary',
-        text: 'Get a Quote',
+        text: '获取报价',
         href: '/contact',
         icon: 'tabler:send',
       },
-      { text: 'View Products', href: '#products', icon: 'tabler:bolt' },
+      { text: '查看产品', href: '#products', icon: 'tabler:bolt' },
     ]}
     image={{
       src: '~/assets/images/gallery/products/1a48ad2016cd28af8bfb5d26ce9751f0.webp',
-      alt: 'focusPower ZS-49 30W PD DC clip charger with alligator clips',
+      alt: 'focusPower ZS-49 30W PD 鳄鱼夹充电器',
     }}
   >
     <Fragment slot="title">
-      12V Battery Chargers,
-      <span class="text-accent dark:text-white"> engineered for global brands</span>
+      12V蓄电池充电器，
+      <span class="text-accent dark:text-white">为全球品牌量身打造</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      FocusPower is a China-based source factory specializing in R&amp;D, production and export of
-      12V alligator clip chargers, lead-acid and lithium battery chargers. From our 8,000&nbsp;m²
-      plant in Zhongshan, we deliver 100,000 units a day to brands, distributors and engineering
-      buyers in 30+ countries — with full OEM/ODM customization, CE &amp; RoHS certification.
+      中山战神电器是一家专注12V蓄电池充电器研发、生产与出口的源头工厂。我们位于广东中山，拥有8000㎡自有厂房，日产10万台，产品远销全球30多个国家，提供完整的OEM/ODM定制服务，通过CE、RoHS国际认证。
     </Fragment>
   </Hero>
 
@@ -82,42 +79,42 @@ const structuredData = [
     countUp
     classes={{ container: '!py-10 md:!py-14' }}
     stats={[
-      { title: 'm² Owned factory', amount: '8,000' },
-      { title: 'Units produced daily', amount: '100,000' },
-      { title: 'Countries served', amount: '30+' },
-      { title: 'Utility patents', amount: '12' },
+      { title: '㎡ 自有厂房', amount: '8,000' },
+      { title: '日产能（台）', amount: '100,000' },
+      { title: '出口国家', amount: '30+' },
+      { title: '实用新型专利', amount: '12' },
     ]}
   />
 
   <!-- Products ******************************************** -->
   <Features
     id="products"
-    tagline="Our Products"
-    title="Core charger lines, built on our own circuits"
-    subtitle="Every product is developed on our own charging-optimization circuit, waterproof housing and alligator-clip connection structure — no generic public-mold design."
+    tagline="核心产品"
+    title="自主研发电路，告别公模同质化"
+    subtitle="每款产品都基于我们自主研发的充电优化电路、防水防护结构和鳄鱼夹稳定连接结构——彻底区别于市面普通公模产品。"
     items={[
       {
-        title: '12V Alligator Clip Chargers',
+        title: '12V鳄鱼夹充电器',
         description:
-          'Fast, reliable clamps for motorcycle, lawn & garden and emergency use. Stable spring-loaded contacts, insulated housing, multiple current ratings.',
+          '适用于摩托车、 Lawn & Garden、应急使用。弹簧夹触点稳定，绝缘外壳，多种电流规格可选。',
         icon: 'tabler:plug-connected',
       },
       {
-        title: '12V Lead-Acid Battery Chargers',
+        title: '12V铅酸电池充电器',
         description:
-          'Multi-stage charging for flooded, AGM and gel lead-acid batteries used in cars, boats and off-grid systems. Over-charge and reverse-polarity protection.',
+          '适用于汽车、船舶、离网系统中的富液式、AGM和胶体铅酸电池。多级充电，防过充、反接保护。',
         icon: 'tabler:battery-charging',
       },
       {
-        title: '12.6V Lithium (LiFePO₄) Chargers',
+        title: '12.6V锂电池充电器',
         description:
-          'Purpose-built 3-cell lithium chargers for outdoor power stations, portable batteries and solar storage packs, with dedicated CC/CV profiles.',
+          '专为3串锂电池设计，适用户外电源、便携电池、太阳能储能包，专用CC/CV充电曲线。',
         icon: 'tabler:bolt',
       },
       {
-        title: 'Solar & Outdoor Power Chargers',
+        title: '太阳能户外充电器',
         description:
-          'Weather-resistant chargers for camping, RV, marine and backup power. UV-stable casing, anti-drip connectors, wide-input voltage for global grids.',
+          '适用于露营、房车、船用、备用电源。防紫外线外壳，防滴漏接头，宽电压输入适配全球电网。',
         icon: 'tabler:sun',
       },
     ]}
@@ -125,40 +122,40 @@ const structuredData = [
 
   <Gallery
     id="gallery"
-    tagline="Product Series"
-    title="From 2.4A to 36W — the focusPower range"
-    subtitle="A family of DC alligator-clip chargers built on the same platform: QC3.0 / PD fast charge, AUTO-ID and our protected clamp design."
+    tagline="产品系列"
+    title="从2.4A到36W——focusPower全系列"
+    subtitle="同一平台打造的DC鳄鱼夹充电器系列：QC3.0/PD快充、AUTO-ID识别、保护夹设计。"
     columns={3}
     images={[
       {
         src: '~/assets/images/gallery/products/1a48ad2016cd28af8bfb5d26ce9751f0.webp',
-        alt: 'ZS-49 30W PD DC clip charger',
+        alt: 'ZS-49 30W PD 鳄鱼夹充电器',
         caption: 'ZS-49 · 30W PD',
       },
       {
         src: '~/assets/images/gallery/products/07c9bea85ba2e547d80922b67f8207ce.webp',
-        alt: 'ZS-88PRO 30W transparent DC clip charger',
+        alt: 'ZS-88PRO 30W 透明款鳄鱼夹充电器',
         caption: 'ZS-88PRO · 30W QC3.0',
       },
       {
         src: '~/assets/images/gallery/products/177045136c03cc258f240a0ebe438ed4.webp',
-        alt: 'ZS-99PRO 36W DC clip charger with light button',
+        alt: 'ZS-99PRO 36W 带指示灯鳄鱼夹充电器',
         caption: 'ZS-99PRO · 36W',
       },
       {
         src: '~/assets/images/gallery/products/156e7bb9659bdc9de2de803df02f3142.webp',
-        alt: 'ZS-38 30W orange QC3.0 charger',
+        alt: 'ZS-38 30W 橙色QC3.0充电器',
         caption: 'ZS-38 · 30W QC3.0',
       },
       {
         src: '~/assets/images/gallery/products/23738a458de3d1a0ad192cd9558c2451.webp',
-        alt: 'ZS-80 white professional 2.4A / QC3.0 charger',
+        alt: 'ZS-80 白色专业款2.4A/QC3.0充电器',
         caption: 'ZS-80 · 2.4A / QC3.0',
       },
       {
         src: '~/assets/images/gallery/products/0f8486dbd5ab48aaeb30b1c2be4d40e1.webp',
-        alt: 'ZS-37 2.4A multi-port charger',
-        caption: 'ZS-37 · 2.4A 4-port',
+        alt: 'ZS-37 2.4A 多口充电器',
+        caption: 'ZS-37 · 2.4A 四口',
       },
     ]}
   />
@@ -167,36 +164,35 @@ const structuredData = [
   <Content
     id="rd"
     isReversed
-    tagline="In-house R&D"
-    title="Patented technology, not off-the-shelf public molds"
+    tagline="自主研发"
+    title="专利技术，不做公模同质化产品"
     items={[
       {
-        title: 'Charging optimization circuit',
+        title: '充电优化电路',
         description:
-          'Our own charging algorithm balances current and voltage in real time, extending battery life and reducing overheating — covered by utility model patents.',
+          '自主充电算法实时平衡电流电压，延长电池寿命、减少过热——已获多项实用新型专利。',
       },
       {
-        title: 'Waterproof & protective housing',
+        title: '防水防护外壳',
         description:
-          'Sealed structural design for indoor and outdoor use, with IP-rated options that resist rain, dust and moisture on the production floor.',
+          '密封结构设计，室内外两用，IP等级可选，防水、防尘、防潮。',
       },
       {
-        title: 'Stable alligator-clip connection',
+        title: '鳄鱼夹稳定连接结构',
         description:
-          'Patented clamp geometry maintains firm contact on battery terminals, resisting vibration and loose connection during transit and use.',
+          '专利夹口结构，电池端子接触牢固，抗震、防松脱，运输和使用更可靠。',
       },
     ]}
     image={{
       src: '~/assets/images/gallery/factory/fef02e7b6169ca01b940d1c2dc333f46.webp',
-      alt: 'Automated production and aging test line at focusPower factory',
+      alt: '战神电器自动化生产与老化测试线',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Customizable to your specification
+        按需定制，满足你的规格
       </h3>
-      We adapt function, appearance, connector type, plug standard and packaging to your target
-      market and brand — not the other way around.
+      我们根据你的目标市场和品牌需求，调整功能、外观、接头类型、插头标准和包装——而不是反过来。
     </Fragment>
   </Content>
 
@@ -204,79 +200,78 @@ const structuredData = [
   <Content
     id="factory"
     isAfterContent
-    tagline="Factory Strength"
-    title="8,000 m² plant, stable daily output of 100,000 units"
+    tagline="工厂实力"
+    title="8000㎡厂房，日产10万台稳定供货"
     items={[
       {
-        title: 'Full automated production lines',
+        title: '全自动化生产线',
         description:
-          'Automated SMT, assembly and aging-test lines with precision instruments, staffed by trained technicians.',
+          '自动化SMT、组装、老化测试线，配备精密检测仪器，专业技师操作。',
       },
       {
-        title: 'End-to-end quality control',
+        title: '全流程品控体系',
         description:
-          'Incoming material inspection → assembly → 100% aging test → final QC before shipment. Every batch is traceable.',
+          '原材料检验 → 生产组装 → 100%老化测试 → 出货前全检。每批次可追溯。',
       },
       {
-        title: 'Fast lead time, reliable supply',
+        title: '交期快、供货稳',
         description:
-          'Daily capacity of 100,000 units lets us handle large repeat orders with predictable delivery schedules.',
+          '日产10万台产能，轻松承接大批量订单，交付周期可预测。',
       },
       {
-        title: 'Global voltage & certifications',
+        title: '全球电压与认证',
         description:
-          'CE, RoHS and other export-standard documentation available. Products adapt to multi-region voltage and plug standards.',
+          '可提供CE、RoHS等出口认证文件。产品适配多国电压和插头标准。',
       },
     ]}
     image={{
       src: '~/assets/images/gallery/factory/4f6c111ce99c50ab05180ee1b6fa12f9.webp',
-      alt: 'focusPower assembly line in Zhongshan, Guangdong',
+      alt: '中山战神电器生产流水线',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Built for volume export
+        专为出口量产打造
       </h3>
-      A dedicated export team supports brands, trading companies and engineering buyers with
-      documentation, labeling and container-level logistics.
+      专业外贸团队服务品牌商、贸易商和工程客户，提供单证、标签、柜级物流一站式支持。
     </Fragment>
   </Content>
 
   <!-- OEM / ODM process *********************************** -->
   <Steps
     id="oem"
-    tagline="How We Work"
-    title="OEM / ODM in four steps"
-    subtitle="From your requirement sheet to container loading — a transparent, repeatable process."
+    tagline="合作流程"
+    title="OEM/ODM定制四步走"
+    subtitle="从你的需求清单到装柜出货——透明、可复制的流程。"
     items={[
       {
-        title: '1. <span class="font-medium">Requirement & spec</span>',
+        title: '1. <span class="font-medium">需求确认与报价</span>',
         description:
-          'Share your target battery type, current, connectors, plug standard, appearance and order volume. We confirm feasibility and quote within 2 working days.',
+          '告诉我们你的目标电池类型、电流、接头、插头标准、外观和订单量。我们2个工作日内确认可行性并报价。',
         icon: 'tabler:clipboard-list',
       },
       {
-        title: '2. <span class="font-medium">Sample & approval</span>',
+        title: '2. <span class="font-medium">样品确认</span>',
         description:
-          'We build a pre-production sample with your branding, labeling and packaging. You test and approve before mass production starts.',
+          '按你的品牌、标签和包装制作产前样品。你测试确认后再开始量产。',
         icon: 'tabler:test-pipe',
       },
       {
-        title: '3. <span class="font-medium">Mass production & QC</span>',
+        title: '3. <span class="font-medium">量产与质检</span>',
         description:
-          'Production runs on our automated lines with 100% aging test. We send production and QC photos/videos by milestone.',
+          '自动化生产线量产，100%老化测试。每个里程碑发送生产和质检照片/视频。',
         icon: 'tabler:building-factory',
       },
       {
-        title: '4. <span class="font-medium">Shipment & support</span>',
+        title: '4. <span class="font-medium">出货与售后</span>',
         description:
-          'Export carton, pallet or container loading per your terms, with full CE/RoHS documentation. After-sales support for warranty and parts.',
+          '按你的条款出口装箱，提供完整CE/RoHS文件。售后质保和配件支持。',
         icon: 'tabler:truck',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80',
-      alt: 'Export warehouse and containers',
+      alt: '出口仓库与集装箱',
     }}
   />
 
@@ -285,50 +280,50 @@ const structuredData = [
     id="certifications"
     classes={{ container: '!py-12 md:!py-16' }}
     items={[
-      { value: 'CE', label: 'EU safety certified', icon: 'tabler:certificate', color: 'text-emerald-500' },
-      { value: 'RoHS', label: 'Restriction of hazardous substances', icon: 'tabler:leaf', color: 'text-green-600' },
-      { value: 'ISO-like QC', label: 'In-house aging test 100%', icon: 'tabler:shield-check', color: 'text-sky-500' },
-      { value: 'OEM/ODM', label: 'Your brand, our production', icon: 'tabler:adjustments', color: 'text-indigo-500' },
+      { value: 'CE', label: '欧盟安全认证', icon: 'tabler:certificate', color: 'text-emerald-500' },
+      { value: 'RoHS', label: '有害物质限制', icon: 'tabler:leaf', color: 'text-green-600' },
+      { value: '全检', label: '100%老化测试', icon: 'tabler:shield-check', color: 'text-sky-500' },
+      { value: 'OEM/ODM', label: '你的品牌，我们生产', icon: 'tabler:adjustments', color: 'text-indigo-500' },
     ]}
   />
 
   <!-- FAQs ************************************************* -->
   <FAQs
     id="faqs"
-    title="Frequently asked questions"
-    subtitle="What overseas buyers typically ask before placing a trial order."
-    tagline="FAQs"
+    title="常见问题"
+    subtitle="客户下试单前最常问的问题。"
+    tagline="FAQ"
     schema
     items={[
       {
-        title: 'What is your MOQ?',
+        title: '起订量是多少？',
         description:
-          'For our existing models, the trial MOQ is typically 500–1,000 units. For full OEM/ODM projects (custom housing, logo, packaging), MOQ is discussed per project and usually starts around 1,000–3,000 units.',
+          '现有型号试单MOQ通常为500-1,000台。完整OEM/ODM项目（定制外壳、logo、包装）MOQ按项目面议，通常1,000-3,000台起。',
       },
       {
-        title: 'Can you customize the product for our brand?',
+        title: '可以为我们的品牌定制产品吗？',
         description:
-          'Yes. We support OEM (logo, color, packaging, plug standard) and ODM (custom function, connector, appearance based on your requirement). Samples are available before mass production.',
+          '可以。支持OEM（logo、颜色、包装、插头标准）和ODM（按你的需求定制功能、接头、外观）。量产前可先做样品。',
       },
       {
-        title: 'What certifications do your products have?',
+        title: '产品有哪些认证？',
         description:
-          'Products are produced to export standards and can provide CE and RoHS documentation. Additional certifications for specific markets can be discussed per project.',
+          '产品按出口标准生产，可提供CE和RoHS文件。特定市场的额外认证可按项目沟通。',
       },
       {
-        title: 'What is the lead time?',
+        title: '交期多久？',
         description:
-          'For in-stock or repeat models, around 15–25 days after deposit. For new OEM/ODM projects, add sample approval time; the production lead time is generally 25–40 days depending on volume.',
+          '现货或返单型号，定金后约15-25天。新OEM/ODM项目需加样品确认时间，量产交期一般25-40天，视数量而定。',
       },
       {
-        title: 'Which regions do you export to?',
+        title: '产品出口到哪些地区？',
         description:
-          'We serve brands, distributors and engineering customers across Europe, the Americas, the Middle East, Southeast Asia and Oceania, with products adapted to local voltage and plug standards.',
+          '我们服务欧洲、美洲、中东、东南亚、大洋洲的品牌商、贸易商和工程客户，产品适配当地电压和插头标准。',
       },
       {
-        title: 'How do I request a quote?',
+        title: '如何获取报价？',
         description:
-          'Email us or add us on WeChat with your target model, quantity and destination country. We will reply within 1–2 business days with specifications and an FOB/CIF quote.',
+          '发邮件或加微信，告诉我们目标型号、数量和目的国。我们1-2个工作日内回复规格和FOB/CIF报价。',
       },
     ]}
   />
@@ -338,17 +333,17 @@ const structuredData = [
     actions={[
       {
         variant: 'primary',
-        text: 'Request a Quote',
+        text: '获取报价',
         href: '/contact',
         icon: 'tabler:send',
       },
     ]}
   >
     <Fragment slot="title">
-      Ready to source 12V chargers<br class="hidden sm:block" /> from a reliable factory?
+      想找一家靠谱的12V充电器工厂？<br class="hidden sm:block" />
     </Fragment>
     <Fragment slot="subtitle">
-      Send us your specification — we will respond with a quote and sample plan within 2 working days.
+      把你的规格发给我们——2个工作日内回复报价和样品方案。
     </Fragment>
   </CallToAction>
 </Layout>

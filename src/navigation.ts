@@ -3,85 +3,85 @@ import { getPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Products',
+      text: '产品中心',
       links: [
         {
-          text: '12V Alligator Clip Chargers',
+          text: '12V 鳄鱼夹充电器',
           href: '/#gallery',
         },
         {
-          text: 'Lead-Acid Battery Chargers',
+          text: '铅酸电池充电器',
           href: '/#products',
         },
         {
-          text: '12.6V Lithium Chargers',
+          text: '12.6V 锂电池充电器',
           href: '/#products',
         },
         {
-          text: 'Solar & Outdoor Chargers',
+          text: '太阳能户外充电器',
           href: '/#products',
         },
       ],
     },
     {
-      text: 'OEM / ODM',
+      text: 'OEM/ODM定制',
       href: '/#oem',
     },
     {
-      text: 'Factory',
+      text: '工厂实力',
       href: '/#factory',
     },
     {
-      text: 'About Us',
+      text: '关于我们',
       href: '/about',
     },
     {
-      text: 'Contact',
+      text: '联系我们',
       href: '/contact',
     },
   ],
-  actions: [{ text: 'Get a Quote', href: '/contact', icon: 'tabler:send' }],
+  actions: [{ text: '获取报价', href: '/contact', icon: 'tabler:send' }],
 };
 
 export const footerData = {
   links: [
     {
-      title: 'Products',
+      title: '产品中心',
       links: [
-        { text: '12V Alligator Clip Chargers', href: '/#gallery' },
-        { text: 'Lead-Acid Battery Chargers', href: '/#products' },
-        { text: '12.6V Lithium Chargers', href: '/#products' },
-        { text: 'Solar & Outdoor Power', href: '/#products' },
+        { text: '12V 鳄鱼夹充电器', href: '/#gallery' },
+        { text: '铅酸电池充电器', href: '/#products' },
+        { text: '12.6V 锂电池充电器', href: '/#products' },
+        { text: '太阳能户外电源', href: '/#products' },
       ],
     },
     {
-      title: 'Solutions',
+      title: '解决方案',
       links: [
-        { text: 'OEM / ODM Customization', href: '/#oem' },
-        { text: 'Factory & QC', href: '/#factory' },
-        { text: 'Certifications (CE / RoHS)', href: '/#certifications' },
-        { text: 'FAQ', href: '/#faqs' },
+        { text: 'OEM/ODM 定制', href: '/#oem' },
+        { text: '工厂与品控', href: '/#factory' },
+        { text: 'CE/RoHS 认证', href: '/#certifications' },
+        { text: '常见问题', href: '/#faqs' },
       ],
     },
     {
-      title: 'Company',
+      title: '公司',
       links: [
-        { text: 'About Us', href: '/about' },
-        { text: 'Contact', href: '/contact' },
-        { text: 'Terms', href: '/terms' },
-        { text: 'Privacy Policy', href: '/privacy' },
+        { text: '关于我们', href: '/about' },
+        { text: '联系我们', href: '/contact' },
+        { text: '服务条款', href: '/terms' },
+        { text: '隐私政策', href: '/privacy' },
       ],
     },
   ],
   secondaryLinks: [
-    { text: 'Terms', href: '/terms' },
-    { text: 'Privacy Policy', href: '/privacy' },
+    { text: '服务条款', href: '/terms' },
+    { text: '隐私政策', href: '/privacy' },
   ],
   socialLinks: [
-    { ariaLabel: 'Email', icon: 'tabler:mail', href: 'mailto:317073043@qq.com' },
-    { ariaLabel: 'WeChat', icon: 'tabler:message-circle', href: 'weixin://dl/chat?15914376302' },
+    { ariaLabel: '邮箱', icon: 'tabler:mail', href: 'mailto:317073043@qq.com' },
+    { ariaLabel: '微信', icon: 'tabler:message-circle', href: 'weixin://dl/chat?15914376302' },
   ],
   footNote: `
-    © ${new Date().getFullYear()} Zhongshan FocusPower Electric Co., Ltd. · All rights reserved.
+    © ${new Date().getFullYear()} 中山市战神电器有限公司 · 版权所有
   `,
 };

@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import businessLicense from '~/assets/images/gallery/business-license.jpg';
 
 const metadata = {
   title: '联系我们',
@@ -53,4 +54,16 @@ const metadata = {
       },
     ]}
   />
+
+  <section class="max-w-3xl mx-auto px-4 py-12 text-center">
+    <h2 class="text-2xl font-bold mb-6 dark:text-white">营业执照 / Business License</h2>
+    <a href={businessLicense.src} target="_blank" rel="noopener">
+      <img
+        src={businessLicense.src}
+        alt="中山市战神电器有限公司营业执照"
+        class="mx-auto rounded-lg shadow-lg max-h-96 w-auto border"
+      />
+    </a>
+    <p class="mt-3 text-sm text-muted">点击图片可放大查看 / Click to enlarge</p>
+  </section>
 </Layout>

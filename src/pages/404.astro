@@ -2,7 +2,7 @@
 import Layout from '~/layouts/Layout.astro';
 import { getHomePermalink } from '~/utils/permalinks';
 
-const title = `Error 404`;
+const title = `页面未找到 / Page Not Found`;
 ---
 
 <Layout metadata={{ title }}>
@@ -13,11 +13,12 @@ const title = `Error 404`;
           <span class="sr-only">Error</span>
           <span class="text-primary">404</span>
         </h2>
-        <p class="text-3xl font-semibold md:text-3xl">Sorry, we couldn't find this page.</p>
+        <p class="text-2xl font-semibold md:text-3xl">页面未找到 / Page Not Found</p>
         <p class="mt-4 mb-8 text-lg text-muted dark:text-slate-400">
-          But don't worry, you can find plenty of other things on our homepage.
+          抱歉，您访问的页面不存在。返回首页继续浏览。<br />
+          Sorry, the page you requested does not exist.
         </p>
-        <a rel="noopener noreferrer" href={getHomePermalink()} class="btn ml-4">Back to homepage</a>
+        <a rel="noopener noreferrer" href={getHomePermalink()} class="btn btn-primary">返回首页 / Back to Home</a>
       </div>
     </div>
   </section>

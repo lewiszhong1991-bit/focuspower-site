@@ -29,7 +29,7 @@ const columnsClass = getColumnsClass(columns);
   {
     items.length > 0 && (
       <div class:list={['grid mx-auto gap-8 md:gap-y-12', columnsClass]}>
-        {items.map(({ title: itemTitle, description, icon, callToAction }) => (
+        {items.map(({ title: itemTitle, description, icon, callToAction, image }) => (
           <div class="intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
             <div class="flex flex-row max-w-md">
               {(icon || defaultIcon) && (
@@ -40,7 +40,7 @@ const columnsClass = getColumnsClass(columns);
                   />
                 </div>
               )}
-              <div class="mt-0.5">
+              <div class="mt-0.5 flex-1">
                 {itemTitle && <h3 class="text-xl md:text-[1.3rem] font-bold">{itemTitle}</h3>}
                 {description && <p class:list={[{ 'mt-3': itemTitle }, 'text-muted']} set:html={description} />}
                 {callToAction && (
@@ -50,6 +50,16 @@ const columnsClass = getColumnsClass(columns);
                 )}
               </div>
             </div>
+            {image && (
+              <a href={image.src} target="_blank" rel="noopener" class="block mt-4 overflow-hidden rounded-lg group">
+                <img
+                  src={image.src}
+                  alt={image.alt ?? itemTitle}
+                  loading="lazy"
+                  class="w-full h-40 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+                />
+              </a>
+            )}
           </div>
         ))}
       </div>

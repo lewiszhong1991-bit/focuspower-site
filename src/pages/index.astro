@@ -19,6 +19,12 @@ import pBattery from '~/assets/images/gallery/products/23738a458de3d1a0ad192cd95
 import pLeadAcid from '~/assets/images/gallery/products/07c9bea85ba2e547d80922b67f8207ce.webp';
 import pLithium from '~/assets/images/gallery/products/177045136c03cc258f240a0ebe438ed4.webp';
 
+const allProductImports = import.meta.glob('~/assets/images/gallery/products/*.webp', { eager: true }) as Record<string, { default: { src: string } }>;
+const galleryImages = Object.entries(allProductImports).map(([path, mod]) => ({
+  src: mod.default.src,
+  alt: 'focusPower 产品图',
+}));
+
 const metadata = {
   title: '12V蓄电池充电器源头工厂 | OEM/ODM定制 - 中山战神电器',
   ignoreTitleTemplate: true,
@@ -144,39 +150,8 @@ const structuredData = [
     title="从2.4A到36W——focusPower全系列"
     subtitle="同一平台打造的DC鳄鱼夹充电器系列：QC3.0/PD快充、AUTO-ID识别、保护夹设计。"
     columns={3}
-    images={[
-      {
-        src: '~/assets/images/gallery/products/1a48ad2016cd28af8bfb5d26ce9751f0.webp',
-        alt: 'ZS-49 30W PD 鳄鱼夹充电器',
-        caption: 'ZS-49 · 30W PD',
-      },
-      {
-        src: '~/assets/images/gallery/products/07c9bea85ba2e547d80922b67f8207ce.webp',
-        alt: 'ZS-88PRO 30W 透明款鳄鱼夹充电器',
-        caption: 'ZS-88PRO · 30W QC3.0',
-      },
-      {
-        src: '~/assets/images/gallery/products/177045136c03cc258f240a0ebe438ed4.webp',
-        alt: 'ZS-99PRO 36W 带指示灯鳄鱼夹充电器',
-        caption: 'ZS-99PRO · 36W',
-      },
-      {
-        src: '~/assets/images/gallery/products/156e7bb9659bdc9de2de803df02f3142.webp',
-        alt: 'ZS-38 30W 橙色QC3.0充电器',
-        caption: 'ZS-38 · 30W QC3.0',
-      },
-      {
-        src: '~/assets/images/gallery/products/23738a458de3d1a0ad192cd9558c2451.webp',
-        alt: 'ZS-80 白色专业款2.4A/QC3.0充电器',
-        caption: 'ZS-80 · 2.4A / QC3.0',
-      },
-      {
-        src: '~/assets/images/gallery/products/0f8486dbd5ab48aaeb30b1c2be4d40e1.webp',
-        alt: 'ZS-37 2.4A 多口充电器',
-        caption: 'ZS-37 · 2.4A 四口',
-      },
-    ]}
-  />
+    images={galleryImages}
+  /> />
 
   <!-- R&D / Patents *************************************** -->
   <Content

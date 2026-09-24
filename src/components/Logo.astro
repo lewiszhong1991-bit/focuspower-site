@@ -1,9 +1,17 @@
 ---
-import logoImg from '~/assets/images/logo.jpg';
 ---
 
-<img
-  src={logoImg.src}
-  alt="FocusPower"
-  class="self-center h-10 w-auto ml-2 rtl:ml-0 rtl:mr-2"
-/>
+<a href="/" class="self-center ml-2 rtl:ml-0 rtl:mr-2 inline-block">
+  <svg width="180" height="56" viewBox="0 0 180 56" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-12 w-auto">
+    <!-- 青绿色椭圆（后层偏上） -->
+    <ellipse cx="90" cy="24" rx="78" ry="18" fill="#5BA8A0"/>
+    <!-- 黄绿色椭圆（后层偏下） -->
+    <ellipse cx="90" cy="34" rx="78" ry="18" fill="#B8CC39"/>
+    <!-- 中间深蓝色梭形 -->
+    <path d="M 18 28 Q 90 8 162 28 Q 90 48 18 28 Z" fill="#1E3A5F"/>
+    <!-- FocusPower 文字 -->
+    <text x="90" y="33" text-anchor="middle" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" letter-spacing="0.5">
+      FocusPower<tspan font-size="9" baseline-shift="super">®</tspan>
+    </text>
+  </svg>
+</a>

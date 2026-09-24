@@ -44,7 +44,7 @@ export const headerData = {
       href: '/contact',
     },
   ],
-  actions: [{ text: '获取报价 / Get Quote', href: '/contact', icon: 'tabler:send' }],
+  actions: [{ text: '📞 15914376302', href: 'tel:15914376302', icon: 'tabler:phone' }],
 };
 
 export const footerData = {

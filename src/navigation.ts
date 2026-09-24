@@ -10,8 +10,20 @@ export const headerData = {
           href: '/#products',
         },
         {
-          text: '12V 鳄鱼夹充电器 / Alligator Clip Charger',
-          href: '/#gallery',
+          text: '12V 鳄鱼夹充电器 / Alligator Clip',
+          href: '/#products',
+        },
+        {
+          text: '12V 蓄电池充电器 / Battery Charger',
+          href: '/#products',
+        },
+        {
+          text: '12V 铅酸电瓶充电器 / Lead-Acid Charger',
+          href: '/#products',
+        },
+        {
+          text: '12.6V 锂电池鳄鱼夹充电器 / Lithium Clip',
+          href: '/#products',
         },
       ],
     },
@@ -41,7 +53,10 @@ export const footerData = {
       title: '产品中心 / Products',
       links: [
         { text: '12V 夹子充电器 / Clip Charger', href: '/#products' },
-        { text: '12V 鳄鱼夹充电器 / Alligator Clip Charger', href: '/#gallery' },
+        { text: '12V 鳄鱼夹充电器 / Alligator Clip', href: '/#products' },
+        { text: '12V 蓄电池充电器 / Battery Charger', href: '/#products' },
+        { text: '12V 铅酸电瓶充电器 / Lead-Acid Charger', href: '/#products' },
+        { text: '12.6V 锂电池鳄鱼夹充电器 / Lithium Clip', href: '/#products' },
       ],
     },
     {

@@ -20,10 +20,14 @@ import pLeadAcid from '~/assets/images/gallery/products/07c9bea85ba2e547d80922b6
 import pLithium from '~/assets/images/gallery/products/177045136c03cc258f240a0ebe438ed4.webp';
 
 const allProductImports = import.meta.glob('~/assets/images/gallery/products/*.webp', { eager: true }) as Record<string, { default: { src: string } }>;
-const galleryImages = Object.entries(allProductImports).map(([path, mod]) => ({
-  src: mod.default.src,
-  alt: 'focusPower 产品图',
-}));
+// 排除手持小风扇，只保留充电器产品图
+const excludeFiles = ['3399cb2d', '4ee15b1a', 'b0d9d18d', 'db21f255'];
+const galleryImages = Object.entries(allProductImports)
+  .filter(([path]) => !excludeFiles.some(f => path.includes(f)))
+  .map(([path, mod]) => ({
+    src: mod.default.src,
+    alt: 'focusPower 产品图',
+  }));
 
 import oFrontDesk from '~/assets/images/gallery/office/e34c8dd05a086f3f679b491f00482c99.webp';
 import oLobby from '~/assets/images/gallery/office/517c2343229f7541495daed523b1b17b.webp';
@@ -163,9 +167,9 @@ const structuredData = [
     tagline="产品系列 / Product Series"
     title="从2.4A到36W——focusPower全系列"
     subtitle="同一平台打造的DC鳄鱼夹充电器系列：QC3.0/PD快充、AUTO-ID识别、保护夹设计。"
-    columns={3}
+    columns={4}
     images={galleryImages}
-  /> />
+  />
 
   <!-- R&D / Patents *************************************** -->
   <Content
